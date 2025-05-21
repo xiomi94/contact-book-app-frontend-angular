@@ -1,0 +1,50 @@
+header {
+  width: 100vw;
+  background-color: #1A5276;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 15px;
+}
+
+.header-avatar-desktop {
+  display: none;
+}
+
+.header-left-side {
+  display: flex;
+  column-gap: 20px;
+  align-items: center;
+}
+
+.header-title {
+  margin-bottom: 0;
+  transform: translateY(-3px);
+  font-size: 35px;
+  font-family: "Georgia", sans-serif;
+  font-weight: bold;
+}
+
+.header-hamburguer-menu-icon {
+  color: white;
+  font-size: 20px;
+  cursor: pointer;
+}
+
+@media (min-width: 1024px) {
+  .header-title {
+    font-size: 45px;
+  }
+
+  .header-hamburguer-menu-icon {
+    font-size: 30px;
+  }
+
+  .header-avatar-mobile {
+    display: none;
+  }
+
+  .header-avatar-desktop {
+    display: block;
+  }
+}
