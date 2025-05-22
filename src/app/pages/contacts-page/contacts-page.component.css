@@ -1,0 +1,45 @@
+contacts-page {
+  width: 100vw;
+  display: flex;
+  align-items: center;
+}
+
+.contacts-page-ul {
+  width: 100vw;
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  padding-left: 15px;
+  justify-content: center;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.contacts-page-ul > li {
+  padding: 10px;
+
+}
+
+.contacts-page-avatar-mobile {
+  color: #1A5276;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+}
+
+.contacts-page-contact-information {
+  font-size: 20px;
+  font-family: "Georgia", sans-serif;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.contacts-page-divider {
+  margin: 0;
+}
+
+
+
+
