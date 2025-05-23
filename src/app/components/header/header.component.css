@@ -5,6 +5,7 @@ header {
   justify-content: space-between;
   align-items: center;
   padding: 10px 15px;
+  flex: 0 0 auto;
 }
 
 .header-avatar-desktop {

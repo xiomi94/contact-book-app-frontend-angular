@@ -1,6 +1,11 @@
 .contact-item-list-container {
-  padding: 10px;
+  padding: 20px;
   border-bottom: 1px solid lightgrey;
+  font-size: 20px;
+  font-family: "Georgia", sans-serif;
+  display: flex;
+  align-items: center;
+  column-gap: 30px;
 }
 
 .contact-item-list-avatar-mobile {
@@ -10,10 +15,63 @@
   border-radius: 50%;
 }
 
-.contact-item-list-contact-information {
-  font-size: 20px;
-  font-family: "Georgia", sans-serif;
-  display: flex;
+.contact-item-list-contact-divider {
+  display: none;
+  width: 100%;
+  height: 1px;
+  background-color: lightgrey;
+}
+
+.contact-item-list-name-container {
+  width: 100%;
+  flex-direction: column;
   align-items: center;
-  gap: 10px;
+  row-gap: 10px;
+  display: none;
+}
+
+.contact-item-list-avatar-desktop {
+  display: none;
+}
+
+.contact-item-list-contact-name-desktop {
+  text-align: center;
+}
+
+@media (min-width: 1024px) {
+
+  .contact-item-list-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    border: 1px solid lightgrey;
+    padding: 10px 0;
+    row-gap: 20px;
+  }
+
+  .contact-item-list-avatar-desktop {
+    display: block;
+  }
+
+  .contact-item-list-contact-name-mobile {
+    display: none;
+  }
+
+  .contact-item-list-name-container {
+    display: flex;
+  }
+
+  .contact-item-list-contact-divider {
+    display: block;
+  }
+
+  .contact-item-list-avatar-mobile {
+    display: none;
+  }
+
+  .contact-item-list-avatar-desktop {
+    color: #1A5276;
+  }
+
+
 }
