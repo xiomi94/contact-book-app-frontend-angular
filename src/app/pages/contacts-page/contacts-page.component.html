@@ -1,11 +1,6 @@
 <ul class="contacts-page-ul">
   @for (contact of contacts(); track contact.id) {
-    <li>
-      <div class="contacts-page-contact-information">
-        <nz-avatar [nzSize]="60" nzIcon="user" class="contacts-page-avatar-mobile"/>
-        <div>{{ contact.name }} {{ contact.lastname }}</div>
-      </div>
-    </li>
+    <app-contact-item-list [contact]="contact"/>
   }
 </ul>
 <button nz-button nzType="primary" class="contacts-page-add-button">

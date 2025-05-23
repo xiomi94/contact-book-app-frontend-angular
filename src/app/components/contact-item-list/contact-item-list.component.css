@@ -1,0 +1,19 @@
+.contact-item-list-container {
+  padding: 10px;
+  border-bottom: 1px solid lightgrey;
+}
+
+.contact-item-list-avatar-mobile {
+  color: #1A5276;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+}
+
+.contact-item-list-contact-information {
+  font-size: 20px;
+  font-family: "Georgia", sans-serif;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
