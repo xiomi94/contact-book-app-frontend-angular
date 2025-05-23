@@ -1,18 +1,19 @@
-import { ApplicationConfig, provideZoneChangeDetection } from '@angular/core';
+import {ApplicationConfig, provideZoneChangeDetection} from '@angular/core';
 import { provideRouter } from '@angular/router';
 
 import { routes } from './app.routes';
 import {provideHttpClient} from '@angular/common/http';
 
 
-// NG ZORRO ICONS
+// NG ZORRO
 import { provideNzIcons } from 'ng-zorro-antd/icon';
 import { IconDefinition } from '@ant-design/icons-angular';
-import { MenuOutline, UserOutline } from '@ant-design/icons-angular/icons';
+import { MenuOutline, UserOutline, UserAddOutline } from '@ant-design/icons-angular/icons';
 
 const icons: IconDefinition[] = [
   MenuOutline,
-  UserOutline
+  UserOutline,
+  UserAddOutline
 ];
 
 export const appConfig: ApplicationConfig = {

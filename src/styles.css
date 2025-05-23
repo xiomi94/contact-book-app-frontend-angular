@@ -2,3 +2,7 @@ body {
   margin: 0;
   font-family: Arial sans-serif;
 }
+
+:root {
+  --ant-primary-color: #1A5276;
+}

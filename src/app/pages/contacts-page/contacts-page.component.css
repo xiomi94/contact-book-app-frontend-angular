@@ -9,16 +9,14 @@ contacts-page {
   list-style: none;
   display: flex;
   flex-direction: column;
-  padding-left: 15px;
   justify-content: center;
-  list-style: none;
   padding: 0;
   margin: 0;
 }
 
 .contacts-page-ul > li {
   padding: 10px;
-
+  border-bottom: 1px solid lightgrey;
 }
 
 .contacts-page-avatar-mobile {
@@ -36,10 +34,20 @@ contacts-page {
   gap: 10px;
 }
 
-.contacts-page-divider {
-  margin: 0;
+.contacts-page-add-button {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  height: auto;
+  width: auto;
+  border-radius: 5px;
+  padding: 15px;
+  cursor: pointer;
 }
 
+.contacts-page-add-button > span {
+  font-size: 60px;
+}
 
 
 
