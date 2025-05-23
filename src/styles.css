@@ -3,6 +3,10 @@ body {
   font-family: Arial sans-serif;
 }
 
+.ant-btn-primary:hover {
+  background-color: #1A5276;
+}
+
 :root {
   --ant-primary-color: #1A5276;
 }

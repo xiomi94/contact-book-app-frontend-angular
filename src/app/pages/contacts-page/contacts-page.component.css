@@ -24,11 +24,17 @@
   border-radius: 5px;
   padding: 15px;
   cursor: pointer;
+  background-color: #1A5276 !important;
 }
 
 .contacts-page-add-button > span {
   font-size: 60px;
 }
+
+.add-new-contact-save-button {
+  border-radius: 5px;
+}
+
  @media (min-width: 1024px) {
    .contacts-page-ul {
      display: grid;

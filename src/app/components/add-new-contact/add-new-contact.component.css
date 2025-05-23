@@ -1,0 +1,25 @@
+.add-new-contact-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.add-new-contact-avatar {
+  margin-bottom: 10px;
+}
+
+.add-new-contact-add-image-button {
+  background-color: #1A5276;
+  color: white;
+  font-size: 15px;
+  font-family: Georgia sans-serif;
+  margin-bottom: 50px;
+  border-radius: 5px;
+}
+
+.add-new-contact-form-input {
+  margin-bottom: 25px;
+}
+
+
+

@@ -4,6 +4,8 @@ import {ContactModel} from '../../models/contact.model';
 import {NzButtonModule} from 'ng-zorro-antd/button';
 import {NzIconModule} from 'ng-zorro-antd/icon';
 import {ContactItemListComponent} from '../../components/contact-item-list/contact-item-list.component';
+import {NzDrawerModule} from 'ng-zorro-antd/drawer';
+import {AddNewContactComponent} from '../../components/add-new-contact/add-new-contact.component';
 
 @Component({
   selector: 'app-contacts-page',
@@ -11,7 +13,9 @@ import {ContactItemListComponent} from '../../components/contact-item-list/conta
   imports: [
     NzButtonModule,
     NzIconModule,
-    ContactItemListComponent
+    ContactItemListComponent,
+    NzDrawerModule,
+    AddNewContactComponent
   ],
   templateUrl: './contacts-page.component.html',
   styleUrl: './contacts-page.component.css',
@@ -22,10 +26,23 @@ export class ContactsPageComponent implements OnInit {
   backend = inject(BackendService)
 
   contacts = signal<ContactModel[]>([])
+  addContactIsVisible = signal<boolean>(true)
 
   ngOnInit(): void {
     this.backend.getContacts().subscribe((response: ContactModel[]) => {
       this.contacts.set(response)
     })
+  }
+
+  addNewContactButtonClick(): void {
+    this.addContactIsVisible.set(true)
+  }
+
+  closeDrawerAddNewContact(): void {
+    this.addContactIsVisible.set(false)
+  }
+
+  onSaveNewContactButtonClick(): void {
+    console.log("guadar nuevo")
   }
 }

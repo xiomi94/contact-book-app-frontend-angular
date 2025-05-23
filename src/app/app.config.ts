@@ -9,6 +9,7 @@ import {provideHttpClient} from '@angular/common/http';
 import { provideNzIcons } from 'ng-zorro-antd/icon';
 import { IconDefinition } from '@ant-design/icons-angular';
 import { MenuOutline, UserOutline, UserAddOutline } from '@ant-design/icons-angular/icons';
+import {provideAnimations} from '@angular/platform-browser/animations';
 
 const icons: IconDefinition[] = [
   MenuOutline,
@@ -21,6 +22,7 @@ export const appConfig: ApplicationConfig = {
     provideZoneChangeDetection({ eventCoalescing: true }),
     provideRouter(routes),
     provideHttpClient(),
-    provideNzIcons(icons)
+    provideNzIcons(icons),
+    provideAnimations()
   ]
 };
