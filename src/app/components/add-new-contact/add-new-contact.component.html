@@ -1,4 +1,4 @@
-<form [formGroup]="newContactForm" class="add-new-contact-container">
+<form [formGroup]="newContactForm()" class="add-new-contact-container">
   <nz-avatar [nzSize]="150" nzIcon="user" class="add-new-contact-avatar"/>
   <button nz-button class="add-new-contact-add-image-button">Añadir imagen</button>
   <input formControlName="name" nz-input nzSize="large" class="add-new-contact-form-input" placeholder="Nombre"

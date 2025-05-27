@@ -9,12 +9,15 @@
   </button>
 </div>
 
-<nz-drawer [nzVisible]="addContactIsVisible()" (nzOnClose)="closeDrawerAddNewContact()" [nzWidth]="'100vw'"
+<nz-drawer [nzVisible]="addContactIsVisible()"
+           (nzOnClose)="closeDrawerAddNewContact()" [nzWidth]="isMobileMediaQuery() ? '100vw' : '700px'"
            [nzTitle]="'Añadir nuevo contacto'" [nzExtra]="extra">
   <ng-container *nzDrawerContent>
-    <app-add-new-contact #/>
+    <app-add-new-contact [newContactForm]="newContactForm()"/>
   </ng-container>
 </nz-drawer>
 <ng-template #extra>
-  <button nz-button nzType="primary" class="add-new-contact-save-button" (click)="onSaveNewContactButtonClick()">Guardar</button>
+  <button nz-button nzType="primary" class="add-new-contact-save-button" (click)="onSaveNewContactButtonClick()">
+    Guardar
+  </button>
 </ng-template>

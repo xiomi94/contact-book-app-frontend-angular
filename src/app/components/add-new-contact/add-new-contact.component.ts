@@ -1,9 +1,9 @@
-import {ChangeDetectionStrategy, Component, inject} from '@angular/core';
+import {ChangeDetectionStrategy, Component, input} from '@angular/core';
 import {NzButtonComponent} from 'ng-zorro-antd/button';
 import {NzWaveDirective} from 'ng-zorro-antd/core/wave';
 import {NzAvatarComponent} from 'ng-zorro-antd/avatar';
 import {NzInputModule} from 'ng-zorro-antd/input';
-import {NonNullableFormBuilder, ReactiveFormsModule} from '@angular/forms';
+import {FormGroup, ReactiveFormsModule} from '@angular/forms';
 
 
 @Component({
@@ -22,12 +22,6 @@ import {NonNullableFormBuilder, ReactiveFormsModule} from '@angular/forms';
 })
 export class AddNewContactComponent {
 
-  formBuilder = inject(NonNullableFormBuilder);
+  newContactForm = input.required<FormGroup>()
 
-  newContactForm = this.formBuilder.group({
-    name: [''],
-    lastname: [''],
-    telephoneNumber: [''],
-    email: ['']
-  })
 }
