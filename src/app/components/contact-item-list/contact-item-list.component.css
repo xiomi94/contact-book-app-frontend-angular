@@ -1,0 +1,111 @@
+.contact-item-list-container {
+  padding: 20px;
+  font-size: 18px;
+  font-family: "Georgia", sans-serif;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  column-gap: 30px;
+  position: relative;
+}
+
+.contact-item-list-avatar-mobile {
+  color: #1A5276;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+}
+
+.contact-item-list-contact-name-mobile {
+  display: flex;
+  align-items: center;
+  column-gap: 15px;
+}
+
+.contact-item-list-contact-divider {
+  display: block;
+  width: 100%;
+  height: 1px;
+  background-color: lightgrey;
+}
+
+.contact-item-list-name-container {
+  width: 100%;
+  flex-direction: column;
+  align-items: center;
+  row-gap: 10px;
+  display: none;
+}
+
+.contact-item-list-avatar-desktop {
+  display: none;
+}
+
+.contact-item-list-contact-name-desktop {
+  text-align: center;
+}
+
+.contact-item-list-delete-icon {
+  border-radius: 5px;
+}
+
+.contact-item-list-delete-icon-desktop {
+  display: none;
+}
+
+@media (min-width: 1024px) {
+
+  .contact-item-list-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    border: 1px solid lightgrey;
+    padding: 10px 0;
+    row-gap: 20px;
+  }
+
+  .contact-item-list-avatar-desktop {
+    display: block;
+    margin-bottom: 10px;
+  }
+
+  .contact-item-list-contact-name-mobile {
+    display: none;
+  }
+
+  .contact-item-list-name-container {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .contact-item-list-avatar-mobile {
+    display: none;
+  }
+
+  .contact-item-list-avatar-desktop {
+    color: #1A5276;
+  }
+
+  .contact-item-list-contact-name-mobile {
+
+  }
+
+  .contact-item-list-contact-name-desktop {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+ .contact-item-list-delete-icon {
+   position: absolute;
+   top: 5px;
+   right: 5px;
+ }
+
+  .contact-item-list-contact-divider-hidden {
+    display: none;
+  }
+
+
+}

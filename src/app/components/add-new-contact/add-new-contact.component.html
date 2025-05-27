@@ -1,0 +1,13 @@
+<form [formGroup]="newContactForm()" class="add-new-contact-container">
+  <nz-avatar [nzSize]="150" nzIcon="user" class="add-new-contact-avatar"/>
+  <button nz-button class="add-new-contact-add-image-button">Añadir imagen</button>
+  <input formControlName="name" nz-input nzSize="large" class="add-new-contact-form-input" placeholder="Nombre"
+         type="text"/>
+  <input formControlName="lastname" nz-input nzSize="large" class="add-new-contact-form-input" placeholder="Apellidos"
+         type="text"/>
+  <input formControlName="telephoneNumber" nz-input nzSize="large" class="add-new-contact-form-input"
+         placeholder="Número de teléfono" type="text"/>
+  <input formControlName="email" nz-input nzSize="large" class="add-new-contact-form-input" placeholder="Email"
+         type="text"/>
+</form>
+

@@ -1,0 +1,50 @@
+.contacts-page-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.contacts-page-ul {
+  width: 100vw;
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 0;
+  margin: 0;
+  max-width: 1300px;
+}
+
+.contacts-page-add-button {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  height: auto;
+  width: auto;
+  border-radius: 5px;
+  padding: 15px;
+  cursor: pointer;
+  background-color: #1A5276 !important;
+}
+
+.contacts-page-add-button > span {
+  font-size: 60px;
+}
+
+.add-new-contact-save-button {
+  border-radius: 5px;
+}
+
+ @media (min-width: 1024px) {
+   .contacts-page-ul {
+     display: grid;
+     grid-template-columns: repeat(3, 1fr);
+     gap: 20px;
+     padding: 40px;
+   }
+
+
+ }
+
+
+

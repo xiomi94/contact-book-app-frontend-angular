@@ -1,0 +1,23 @@
+<div class="contacts-page-container">
+  <ul class="contacts-page-ul">
+    @for (contact of contacts(); track contact.id) {
+      <app-contact-item-list [contact]="contact" (deleteContact)="deleteContact($event)"/>
+    }
+  </ul>
+  <button nz-button nzType="primary" class="contacts-page-add-button" (click)="addNewContactButtonClick()">
+    <span nz-icon nzType="user-add" nzTheme="outline"></span>
+  </button>
+</div>
+
+<nz-drawer [nzVisible]="addContactIsVisible()"
+           (nzOnClose)="closeDrawerAddNewContact()" [nzWidth]="isMobileMediaQuery() ? '100vw' : '700px'"
+           [nzTitle]="'Añadir nuevo contacto'" [nzExtra]="extra">
+  <ng-container *nzDrawerContent>
+    <app-add-new-contact [newContactForm]="newContactForm()"/>
+  </ng-container>
+</nz-drawer>
+<ng-template #extra>
+  <button nz-button nzType="primary" class="add-new-contact-save-button" (click)="onSaveNewContactButtonClick()">
+    Guardar
+  </button>
+</ng-template>
