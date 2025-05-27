@@ -8,13 +8,14 @@ import {provideHttpClient} from '@angular/common/http';
 // NG ZORRO
 import { provideNzIcons } from 'ng-zorro-antd/icon';
 import { IconDefinition } from '@ant-design/icons-angular';
-import { MenuOutline, UserOutline, UserAddOutline } from '@ant-design/icons-angular/icons';
+import { MenuOutline, UserOutline, UserAddOutline, UserDeleteOutline } from '@ant-design/icons-angular/icons';
 import {provideAnimations} from '@angular/platform-browser/animations';
 
 const icons: IconDefinition[] = [
   MenuOutline,
   UserOutline,
-  UserAddOutline
+  UserAddOutline,
+  UserDeleteOutline
 ];
 
 export const appConfig: ApplicationConfig = {

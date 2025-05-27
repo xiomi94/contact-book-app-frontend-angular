@@ -1,7 +1,7 @@
 <div class="contacts-page-container">
   <ul class="contacts-page-ul">
     @for (contact of contacts(); track contact.id) {
-      <app-contact-item-list [contact]="contact"/>
+      <app-contact-item-list [contact]="contact" (deleteContact)="deleteContact($event)"/>
     }
   </ul>
   <button nz-button nzType="primary" class="contacts-page-add-button" (click)="addNewContactButtonClick()">

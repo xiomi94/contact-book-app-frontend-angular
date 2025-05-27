@@ -82,4 +82,13 @@ export class ContactsPageComponent implements OnInit {
     })
 
   }
+
+  deleteContact(contact: ContactModel): void {
+    this.backend.deleteContact(contact.id!).subscribe(() => {
+      this.contacts.update((oldValue) => {
+        const newContactList: ContactModel[] = oldValue.filter(iterateContact => iterateContact.id !== contact.id);
+        return newContactList
+      })
+    })
+  }
 }

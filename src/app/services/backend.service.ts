@@ -23,5 +23,9 @@ export class BackendService {
     return this.http.post<ContactModel>(url, body)
   }
 
-  
+  deleteContact(id: number): Observable<{ status: string }> {
+    const url = `${this.BACKEND_URL}/contact/${id}`
+
+    return this.http.delete<{ status: string }>(url)
+  }
 }
