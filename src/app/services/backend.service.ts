@@ -16,4 +16,12 @@ export class BackendService {
 
     return this.http.get<ContactModel[]>(url)
   }
+
+  postContact(body: ContactModel): Observable<ContactModel> {
+    const url = `${this.BACKEND_URL}/contact`
+
+    return this.http.post<ContactModel>(url, body)
+  }
+
+  
 }

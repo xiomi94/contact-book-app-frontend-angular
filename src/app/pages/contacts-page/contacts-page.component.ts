@@ -28,7 +28,7 @@ export class ContactsPageComponent implements OnInit {
   formBuilder = inject(NonNullableFormBuilder);
 
   contacts = signal<ContactModel[]>([])
-  addContactIsVisible = signal<boolean>(true)
+  addContactIsVisible = signal<boolean>(false)
   isMobileMediaQuery = signal<boolean>(false)
 
   newContactForm = signal<FormGroup>(
@@ -72,7 +72,14 @@ export class ContactsPageComponent implements OnInit {
   }
 
   onSaveNewContactButtonClick(): void {
-    console.log("guadar nuevo")
-    console.log(this.getContactDataByForm())
+    this.addContactIsVisible.set(false)
+    const body: ContactModel = this.getContactDataByForm()
+    this.backend.postContact(body).subscribe((response: ContactModel) => {
+      this.contacts.update((oldValue) => {
+        const newContacts: ContactModel[] = [...oldValue, response]
+        return newContacts
+      })
+    })
+
   }
 }
