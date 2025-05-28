@@ -13,23 +13,24 @@ as I've been asked to learn frontend development with framework for the first ti
 
 * Install Angular with this command
 
-
-    npm install -g @angular/cli
+```
+npm install -g @angular/cli
+```
 
 ## Running the project
 
 * Install dependencies with
 
-
-    npm install
+```
+npm install
+```
 
 * Start the project with 
 
-
-    npm run start
-
-
-
+```
+npm run start
+```
+    
 
 [Angular]: https://img.shields.io/badge/Angular-DD0031?style=for-the-badge&logo=angular&logoColor=white
 [Angular-url]: https://angular.dev/
