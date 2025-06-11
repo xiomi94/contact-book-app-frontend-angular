@@ -1,4 +1,4 @@
-import {ChangeDetectionStrategy, Component, EventEmitter, Output} from '@angular/core';
+import {ChangeDetectionStrategy, Component, output} from '@angular/core';
 
 @Component({
   selector: 'app-search-bar',
@@ -9,5 +9,13 @@ import {ChangeDetectionStrategy, Component, EventEmitter, Output} from '@angular
   changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class SearchBarComponent {
+  searchQuery = output<string>()
 
+  buscarContacto(event: KeyboardEvent): void {
+    if (event.key == "Enter") {
+      const target = event.target as HTMLInputElement
+      this.searchQuery.emit(target.value)
+
+    }
+  }
 }
