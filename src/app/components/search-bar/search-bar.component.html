@@ -1,3 +1,8 @@
-<input type="text" placeholder="Buscar..." (keyup)="buscarContacto($event)">
-
-
+<div class="search-bar-container">
+    <nz-input-group [nzSuffix]="suffixIconSearch" class="search-bar-input-component">
+        <input type="text" nz-input placeholder="Buscar..." class="search-bar-input" (keyup)="buscarContacto($event)" />
+    </nz-input-group>
+    <ng-template #suffixIconSearch>
+        <span nz-icon nzType="search"></span>
+    </ng-template>
+</div>
