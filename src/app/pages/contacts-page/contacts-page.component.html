@@ -1,3 +1,4 @@
+<app-search-bar (searchQuery)="searchBarDataEvent($event)"/>
 <div class="contacts-page-container">
   <ul class="contacts-page-ul">
     @for (contact of contacts(); track contact.id) {

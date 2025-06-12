@@ -1,5 +1,5 @@
 import {inject, Injectable} from '@angular/core';
-import {HttpClient} from '@angular/common/http';
+import {HttpClient, HttpParams} from '@angular/common/http';
 import {Observable} from 'rxjs';
 import {ContactModel} from '../models/contact.model';
 
@@ -27,5 +27,12 @@ export class BackendService {
     const url = `${this.BACKEND_URL}/contact/${id}`
 
     return this.http.delete<{ status: string }>(url)
+  }
+
+  getFilteredContact(name: string): Observable<ContactModel[]> {
+    const url = `${this.BACKEND_URL}/contact/search`
+    const params = new HttpParams().set('searchTerm', name)
+
+    return this.http.get<ContactModel[]>(url, {params})
   }
 }

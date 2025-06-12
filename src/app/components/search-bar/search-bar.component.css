@@ -1,0 +1,21 @@
+.search-bar-input {
+    height: 35px;
+    border-radius: 6px;
+}
+
+.search-bar-input::placeholder {
+    font-size: 20px;
+}
+
+.search-bar-input-component {
+    width: 100%;
+    margin: 5px auto;
+    max-width: 1220px;
+}
+
+.search-bar-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+

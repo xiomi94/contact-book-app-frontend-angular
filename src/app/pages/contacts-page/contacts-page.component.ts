@@ -7,6 +7,7 @@ import {ContactItemListComponent} from '../../components/contact-item-list/conta
 import {NzDrawerModule} from 'ng-zorro-antd/drawer';
 import {AddNewContactComponent} from '../../components/add-new-contact/add-new-contact.component';
 import {FormGroup, NonNullableFormBuilder} from '@angular/forms';
+import {SearchBarComponent} from '../../components/search-bar/search-bar.component';
 
 @Component({
   selector: 'app-contacts-page',
@@ -16,7 +17,8 @@ import {FormGroup, NonNullableFormBuilder} from '@angular/forms';
     NzIconModule,
     ContactItemListComponent,
     NzDrawerModule,
-    AddNewContactComponent
+    AddNewContactComponent,
+    SearchBarComponent
   ],
   templateUrl: './contacts-page.component.html',
   styleUrl: './contacts-page.component.css',
@@ -30,6 +32,7 @@ export class ContactsPageComponent implements OnInit {
   contacts = signal<ContactModel[]>([])
   addContactIsVisible = signal<boolean>(false)
   isMobileMediaQuery = signal<boolean>(false)
+
 
   newContactForm = signal<FormGroup>(
     this.formBuilder.group({
@@ -47,7 +50,7 @@ export class ContactsPageComponent implements OnInit {
 
     const mediaQuery = window.matchMedia('(min-width: 1024px)');
     this.isMobileMediaQuery.set(!mediaQuery.matches)
-    mediaQuery.addEventListener('change', (event) => {
+    mediaQuery.addEventListener('change', (event: any) => {
       this.isMobileMediaQuery.set(!event.matches)
     });
   }
@@ -89,6 +92,12 @@ export class ContactsPageComponent implements OnInit {
         const newContactList: ContactModel[] = oldValue.filter(iterateContact => iterateContact.id !== contact.id);
         return newContactList
       })
+    })
+  }
+
+  searchBarDataEvent(event: string): void {
+    this.backend.getFilteredContact(event).subscribe((response) => {
+      this.contacts.set(response)
     })
   }
 }
